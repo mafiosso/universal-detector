@@ -17,6 +17,7 @@ GNUSTEP_OPTS =	-DGNUSTEP \
 		-fconstant-string-class=NSConstantString
 
 GCC_OPTS = 	-O2 \
+		-fPIC \
 		-Wno-import \
 		-Wno-multichar \
 		-g \
@@ -43,7 +44,7 @@ LIBS =  -Wl,--no-whole-archive \
 	-lm
 
 ALL_LDFLAGS =	-Wl,--whole-archive \
-		-fexceptions \
+		-fexceptions -fPIC \
 		-fgnu-runtime \
 		$(LDFLAGS)
 
